@@ -1,0 +1,135 @@
+
+======================
+QUESTION NORMAL PART 2
+======================
+
+QUESTION 8
+----------
+“401 Unauthorized” what does it mean and how to identify the problem?
+
+Answer::
+The HyperText Transfer Protocol (HTTP) 401 Unauthorized response status code indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
+This status code is sent with an HTTP WWW-Authenticate response header that contains information on how the client can request for the resource again after prompting the user for authentication credentials.
+//Status
+401 Unauthorized
+
+//Example response
+HTTP/1.1 401 Unauthorized
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+WWW-Authenticate: Basic realm="Access to staging site"
+
+
+QUESTION 9
+----------
+“403 Forbidden” what does it mean and how to identify the problem?
+
+Answer::
+The HTTP 403 Forbidden response status code indicates that the server understands the request but refuses to authorize it.
+
+This status is similar to 401, but for the 403 Forbidden status code, re-authenticating makes no difference. T
+he access is tied to the application logic, such as insufficient rights to a resource.
+
+//Status
+403 Forbidden
+
+//Example response
+HTTP/1.1 403 Forbidden
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+
+QUESTION 10
+-----------
+“404 Not Found” what does it mean and how to identify the problem?
+
+Answer::
+The HTTP 404 Not Found response status code indicates that the server cannot find the requested resource. Links that lead to a 404 page are often called broken or dead links and can be subject to link rot.
+
+A 404 status code only indicates that the resource is missing: not whether the absence is temporary or permanent. If a resource is permanently removed, use the 410 (Gone) status instead.
+
+//Status
+404 Not Found
+
+//Custom error pages
+You can display a custom 404 page to be more helpful to a user and provide guidance on what to do next. For example, for the Apache server, you can specify a path to a custom 404 page in an .htaccess file:
+
+ErrorDocument 404 /notfound.html
+
+
+QUESTION 11
+-----------
+“500 Internal Server Error” what does it mean and how to identify the problem?
+
+Answer::
+The HyperText Transfer Protocol (HTTP) 500 Internal Server Error server error response code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.
+
+This error response is a generic "catch-all" response. Usually, this indicates the server cannot find a better 5xx error code to response. Sometimes, server administrators log error responses like the 500 status code with more details about the request to prevent the error from happening again in the future.
+
+//Status
+500 Internal Server Error
+
+
+QUESTION 12
+-----------
+“502 Bad Gateway” what does it mean and how to identify the problem?
+
+Answer::
+The HyperText Transfer Protocol (HTTP) 502 Bad Gateway server error response code indicates that the server, while acting as a gateway or proxy, received an invalid response from the upstream server.
+//Status
+502 Bad Gateway
+
+
+QUESTION 13
+-----------
+“503 Service Unavailable” what does it mean and how to identify the problem?
+
+Answer::
+The HyperText Transfer Protocol (HTTP) 503 Service Unavailable server error response code indicates that the server is not ready to handle the request.
+
+Common causes are a server that is down for maintenance or that is overloaded. This response should be used for temporary conditions and the Retry-After HTTP header should, if possible, contain the estimated time for the recovery of the service
+Caching-related headers that are sent along with this response should be taken care of, as a 503 status is often a temporary condition and responses shouldn't usually be cached.
+
+//Status
+503 Service Unavailable
+
+
+QUESTION 14
+-----------
+“504 Gateway Timeout” what does it mean and how to identify the problem?
+
+Answer::
+The HyperText Transfer Protocol (HTTP) 504 Gateway Timeout server error response code indicates that the server, while acting as a gateway or proxy, did not get a response in time from the upstream server that it needed in order to complete the request.
+//Status
+504 Gateway Timeout
+
+
+QUESTION 15
+-----------
+What Linux network tools do you use for troubleshooting network problems as well as usage scenarios for each tool?
+
+Answer::
+1. Ping
+ A network troubleshooting tool used to test the reachability of a host on an Internet Protocol (IP) network.
+ 
+2. IP command tool 
+Found in the net tools which are used for performing several network administration tasks.
+
+3. NSLookup 
+A network administration command-line tool for querying the Domain Name System (DNS) to obtain the mapping between a domain name and IP address.
+
+4. Domain Information Groper (Dig) 
+A network administration command-line tool for querying the DNS. Dig is useful for network troubleshooting and educational purposes.
+
+5. Ethtool
+A tool used for troubleshooting in a Linux network. It is primarily used to query and control Ethernet devices, including driver and hardware settings on Linux systems.
+6. PuTTY
+A free and open-source terminal emulator, serial console, and network file transfer application.
+
+7. Traceroute
+A tool in Linux that allows you to investigate the routes of network packets and identify the limiting factor in their journeys.
+
+8. Route
+The route command is used to view and make changes to the kernel routing table on Linux, BSD, and other Unix-like systems.
+
+
+AUTHOR
+------
+Chanathip Nirandaropas

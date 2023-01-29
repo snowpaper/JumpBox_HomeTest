@@ -1,0 +1,85 @@
+
+=====================
+QUESTION PROFESSIONAL
+=====================
+
+QUESTION 1
+----------
+Assume that you are using a private cloud for your infrastructure. How do you manage
+logs, metrics, and alerts for your infrastructure and applications? Which tools do you
+use and why?
+Answer::
+
+
+
+QUESTION 2
+----------
+How do you secure the following?
+· application
+· infrastructure
+· data
+Answer::
+· For application
+
+
+· For infrastructure
+
+
+· For data
+
+
+
+QUESTION 3
+----------
+Based on your experience, how do you reduce your service downtime as much as
+possible during
+· software upgrade
+· database migration
+· incident
+Answer::
+· For software upgrade
+
+
+· For database migration
+
+
+· For incident
+
+
+
+QUESTION 4
+----------
+How do you design your Kubernetes cluster? what DNS, CNI, ingression is being used? Why?
+Answer::
+
+
+
+QUESTION 5
+----------
+How do you design your Cloud infrastructure? (Answer as draw.io or your tool ofchoices)
+- Networking
+- Security
+- Data Durability
+- High Availability
+- Autoscaling
+Answer::
+
+
+
+QUESTION 6
+----------
+How do you measure service quality to give the best experience to your customer? (SLO, SLA)
+Answer::
+
+
+
+QUESTION 7
+----------
+How do you design a highly scalable Kubernetes cluster and which Kubernetes objects
+are being used? (answer as drawio or your tool of choices)
+Answer::
+
+
+AUTHOR
+------
+Chanathip Nirandaropas

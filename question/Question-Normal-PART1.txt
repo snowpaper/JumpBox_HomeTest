@@ -1,0 +1,103 @@
+
+======================
+QUESTION NORMAL PART 1
+======================
+
+QUESTION 1
+----------
+Describe Git branching strategies (Git-flow, single branch, feature branch etc.) 
+which you have used and what purpose it serves.
+
+Answer::
+Git branching strategies is the strategy that software development teams adopt when writing, 
+merging and deploying code when using a version control system.
+It is essentially a set of rules that developers can follow to stipulate how they interact with a shared codebase.
+
+
+QUESTION 2
+----------
+How do you revert a commit that has already been pushed and made public?
+
+Answer::
+1. Removing or fixing the bad file in a new commit and pushing it to the remote repository. Then commiting it to the remote repository using:
+git commit -m "commit message"
+
+2. Creating a new commit that undoes all the changes that were made in the bad commit, using the following command:
+git revert 
+
+
+QUESTION 3
+----------
+How do you normally solve conflicts in a feature branch before merge?
+
+Answer::
+1. The easiest way to resolve a conflicted file is to open it and make any necessary changes
+2. After editing the file, we can use the git add a command to stage the new merged content
+3. The final step is to create a new commit with the help of the git commit command
+4. Git will create a new merge commit to finalize the merge
+
+
+QUESTION 4
+----------
+“200 OK” what does it mean and show the use case of this HTTP Status?
+
+Answer::
+The 200 OK HTTP response always has a message body, 
+although the server can optionally specify that it is of zero length. Depending on the server, 
+this is expected behavior when submitting a PUT, DELETE, or OPTIONS HTTP request.
+Example usage of HTTP PUT Method for HTTP 200 Status Code is below.
+
+PUT /example.htm HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: www.holisticseo.digital
+Accept-Language: en-us
+Connection: Keep-Alive
+Content-type: text/html
+Content-Length: 182
+<html>
+<body>
+<h1>HTTP 200 Status Code Sample with HTTP Request Methods </h1>
+</body>
+</html>
+
+
+QUESTION 5
+----------
+“201 Created” what does it mean and show the use case of this HTTP Status?
+
+Answer::
+The HTTP Status Code 201 means that the request has been fulfilled by the server, and that a new resource has been created.
+
+QUESTION 6
+----------
+“301 Moved Permanently” what does it mean and show the use case of this HTTP Status?
+
+Answer::
+The HyperText Transfer Protocol (HTTP) 301 Moved Permanently redirect status response code indicates that the requested resource has been definitively moved to the URL given by the Location headers. A browser redirects to the new URL and search engines update their links to the resource.
+
+//Client request
+GET /index.php HTTP/1.1
+Host: www.example.org
+
+//Server response
+HTTP/1.1 301 Moved Permanently
+Location: http://www.example.org/index.asp
+
+
+QUESTION 7
+----------
+“400 Bad Request” what does it mean and how to identify the problem?
+
+Answer::
+A 400 Bad Request Error indicates that the server (remote computer) is unable (or refuses) to process the request sent by the client (web browser).
+There are several scenarios in which a 400 Bad Request Error could appear in an application, but below are the most likely causes:
+
+1. The client may be sending deceptive request routing information. Some web applications/web servers look for custom HTTP headers to process requests and verify the client isn’t attempting anything malicious. If an expected custom HTTP header is missing or invalid, a 400 error is a likely result.
+2. The client may be uploading a file that is too large. Most web servers or applications have an explicit file size limit that prevents files that are too big from being uploaded. This is to prevent bandwidth clogging.
+3. The client is accessing an invalid URL. If the client is sending a request to an invalid URL — particularly one that is malformed via improper characters — this could result in an http error 400.
+4. The client is using an invalid or expired local cookie. Again, this could be malicious or accidental. It’s possible that a local cookie in the web browser is identifying you via a session cookie. If this particular session token matches the session token from another request from a different client, the server/application may see this as a malicious act and produce a 400 Bad Request Error code.
+
+
+AUTHOR
+------
+Chanathip Nirandaropas

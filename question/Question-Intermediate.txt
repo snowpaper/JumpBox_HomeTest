@@ -1,0 +1,79 @@
+
+=====================
+QUESTION INTERMEDIATE
+=====================
+
+QUESTION 1
+----------
+Assume we have an application that is designed as below. Our application stopped
+responding due to an extremely high number of clients in some circumstances.
+- We have tried scaling a number of API Gateway and Service A nodes but it didn’t help.
+What are the possible problems that lies in our system in which components and how
+to fix them?
+Answer::
+
+
+
+QUESTION 2
+----------
+How do you keep the docker image smallest as possible?
+Answer::
+1. Squash multiple layers into one with multi-stage Docker builds
+When a Git repository becomes bigger, you can choose to squash the history into a single commit and forget about the past.
+It turns out you can do something similar in Docker too with a multi-stage build.
+
+2. Remove all the unnecessary cruft from the container with distroless
+The current image ships Node.js as well as yarn, npm, bash and a lot of other binaries.
+It's also based on Ubuntu. So you have a fully fledged operating system with all its little binaries and utilities.
+
+3. Smaller base images with Alpine
+You could replace the distroless base image with an Alpine based image.
+
+
+QUESTION 3
+----------
+How does the Kubernetes service talk to each other in the same cluster?
+Answer::
+
+
+
+QUESTION 4
+----------
+What’s different between L2, L4, and L7 Load balancers? When to use it?
+Answer::
+- The advantages of Layer 4 Load Balancing
+Suitable for packet-level balancing of loads
+It is quick and efficient because it does not take data into account.
+Because packets are not examined, they are more secure. If it is compromised, no one will be able to access the data.
+It just forwards the packets. It does not need to decrypt the content before forwarding.
+NAT is used.
+Maintains only one NATed connection between the client and the server, allowing your load balancer to serve a maximum number of TCP connections.
+
+- The disadvantages of Layer 4 Load Balancing
+Based on the content, smart load balancing is not possible.
+Cannot perform true microservices.
+Because it is a stateful protocol, it must be sticky. When a connection is established, it is routed to a single server in the backend.
+All packets sent through this connection are routed to a single server. Based on the algorithm, the next connection will select another server.
+
+- The advantages of Layer 7 Load Balancing
+Based on the URL, it provides smart routing.
+It offers caching.
+
+- The disadvantages of Layer 7 Load Balancing
+It is expensive.
+
+When to use it?
+L4
+When a connection is established, it is routed to a single server in the backend.
+All packets sent through this connection are routed to a single server. Based on the algorithm, the next connection will select another server.
+L7
+In terms of security, your certificate must be shared with the load balancers. If an attacker gains control to the load balancer, 
+they will have total access to all of your data.
+Its proxy establishes several connections — client to proxy/proxy to server — so you are limited by the load balancer’s maximum TCP connection.
+
+
+Decryption is required.
+
+AUTHOR
+------
+Chanathip Nirandaropas
